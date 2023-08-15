@@ -1,0 +1,1011 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="logo"><img src="src/nezavod_logo.svg" alt=""></div>
+<!-- Control buttons -->
+<div class="cart">
+    <a class="button delivery modal-button" href="#myModal4"></a>
+    <!-- <img src="src/cart.svg" alt="cart image"> -->
+</div>
+
+<div id="myBtnContainer">
+    <div class="first-row">
+    <button class="btn1 active" onclick="filterSelection('all')">ВСЕ</button>
+    <button class="btn1" onclick="filterSelection('xylinet')">XYLINET?</button>
+    <button class="btn1" onclick="filterSelection('achonet')">АЧОНЕТ</button>
+</div>
+    <div class="second-row">
+    <button class="btn1" onclick="filterSelection('titans')">ЯРОСТЬ ТИТАНОВ</button>
+    <button class="btn1" onclick="filterSelection('cold')">XYLINET <span class="cold">COLD</span></button>
+    </div>
+</div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+    <div class="blocks">
+    <div class="filterDiv cold" data-id="xylinetcoconutik">
+        <img class="product-image" src="src/cold/ananac.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Ананас <br> Кокос</h1>
+        <h1 class="price">от 195Р</h1>
+        <div class="btns">
+        <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+        <p id="counter50" data-counter>0</p>
+        <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+        </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv cold" data-id="xylinetcherry">
+        <img class="product-image" src="src/cold/cherrylime.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Вишня <br> Лайм</h1>
+        <h1 class="price">от 195Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv cold" data-id="xylinetgrapefruit">
+        <img class="product-image" src="src/cold/grapefruit.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Грейпфрут <br> Иринг</h1>
+        <h1 class="price">от 195Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinetmint">
+        <img class="product-image" src="src/cold/mintmenthol.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Ментол <br> Мята</h1>
+        <h1 class="price">от 195Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinetstrawberry">
+        <img class="product-image" src="src/cold/strawberrylichi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD</h2>
+        <h1 class="block__title item_title">Клубника <br> Личи</h1>
+        <h1 class="price">от 195Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardcoconut">
+        <img class="product-image" src="src/cold/ananac.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Ананас <br> Кокос</h1>
+        <h1 class="price">от 210Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardcherry">
+        <img class="product-image" src="src/cold/cherrylime.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Вишня <br> Лайм</h1>
+        <h1 class="price">от 210Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardgrapefruit">
+        <img class="product-image" src="src/cold/grapefruit.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Грейпфрут <br> Иринг</h1>
+        <h1 class="price">от 210Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardmint">
+        <img class="product-image" src="src/cold/mintmenthol.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Ментол <br> Мята</h1>
+        <h1 class="price">от 210Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+
+    </div>
+    <div class="filterDiv cold" data-id="xylinethardstrawberry">
+        <img class="product-image" src="src/cold/strawberrylichi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET COLD <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Клубника <br> Личи</h1>
+        <h1 class="price">от 210Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titansriner">
+        <img class="product-image MA-image" src="src/titans/riner.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов</h2>
+        <h1 class="block__title item_title">Арбуз Дыня</h1>
+        <h1 class="price">от 200Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titanmikasa">
+        <img class="product-image MA-image" src="src/titans/mikasa.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов</h2>
+        <h1 class="block__title item_title">Виноград</h1>
+        <h1 class="price">от 200Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titanlevi">
+        <img class="product-image MA-image" src="src/titans/levi.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов</h2>
+        <h1 class="block__title item_title">Яблоко Груша</h1>
+        <h1 class="price">от 200Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titanarmin">
+        <img class="product-image MA-image" src="src/titans/armin.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов</h2>
+        <h1 class="block__title item_title">Гуава Малина</h1>
+        <h1 class="price">от 200Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titaneren">
+        <img class="product-image MA-image" src="src/titans/eren.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов</h2>
+        <h1 class="block__title item_title">Лесные Ягоды</h1>
+        <h1 class="price">от 200Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="attacktitan">
+        <img class="product-image MA-image" src="src/titans/attacktitan.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Лесные Ягоды </h1>
+        <h1 class="price">от 220Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titan">
+        <img class="product-image MA-image" src="src/titans/titan.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Яблоко Груша</h1>
+        <h1 class="price">от 220Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titankolos">
+        <img class="product-image MA-image" src="src/titans/titankolos.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Гуава Малина</h1>
+        <h1 class="price">от 220Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titanerenhard">
+        <img class="product-image MA-image" src="src/titans/erentitan.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Арбуз Дыня </h1>
+        <h1 class="price">от 220Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv titans" data-id="titanmolot">
+        <img class="product-image MA-image" src="src/titans/titan-molot.png" alt="">
+        <h2 class="block__title pre-title">Ярость Титанов <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Виноград </h1>
+        <h1 class="price">от 220Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    <!-- ЗДЕСЬ НОРМ -->
+    <div class="filterDiv achonet" data-id="zombiehardabs">
+        <img class="product-image MA-image" src="src/achonet/zombiehard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Зомби</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="vinogradhardabs">
+        <img class="product-image MA-image" src="src/achonet/vinogradhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Виноград-личи</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="sexonbeachhardabs">
+        <img class="product-image MA-image" src="src/achonet/sexonbeachhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Секс на пляже</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="pornstarhardabs">
+        <img class="product-image MA-image" src="src/achonet/pornstarhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Порнстар мартини</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="mohitohardabs">
+        <img class="product-image MA-image" src="src/achonet/mohitohard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Мохито</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="mangohardabs">
+        <img class="product-image MA-image" src="src/achonet/mangohard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Манго-маракуйя</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="ezhevikahardabs">
+        <img class="product-image MA-image" src="src/achonet/ezhevikahard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Ежевика-малина</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="energyhardabs">
+        <img class="product-image MA-image" src="src/achonet/energyhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Энергетик-цитрус</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="claverhardabs">
+        <img class="product-image MA-image" src="src/achonet/claverhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Клавер клаб</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="arbuzhardabs">
+        <img class="product-image MA-image" src="src/achonet/arbuzhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Арбуз-клубника</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="aperolhardabs">
+        <img class="product-image MA-image" src="src/achonet/aperolhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Апероль шприц</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="morcnormabs">
+        <img class="product-image MA-image" src="src/achonet/morcnorm.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Морс из ягод</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="vinogramnormikabs">
+        <img class="product-image MA-image" src="src/achonet/vinogradnorm.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ?</h2>
+        <h1 class="block__title item_title">Виноград-малина</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    <!-- ЗДЕСЬ ХАРД -->
+    <div class="filterDiv achonet" data-id="zombiehard">
+        <img class="product-image MA-image" src="src/achonet/zombiehard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Зомби</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="vinogradhard">
+        <img class="product-image MA-image" src="src/achonet/vinogradhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Виноград-личи</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="sexonbeachhard">
+        <img class="product-image MA-image" src="src/achonet/sexonbeachhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Секс на пляже</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="pornstarhard">
+        <img class="product-image MA-image" src="src/achonet/pornstarhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Порнстар мартини</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="mohitohard">
+        <img class="product-image MA-image" src="src/achonet/mohitohard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Мохито</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="mangohard">
+        <img class="product-image MA-image" src="src/achonet/mangohard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Манго-маракуйя</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="ezhevikahard">
+        <img class="product-image MA-image" src="src/achonet/ezhevikahard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Ежевика-малина</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="energyhard">
+        <img class="product-image MA-image" src="src/achonet/energyhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Энергетик-цитрус</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="claverhard">
+        <img class="product-image MA-image" src="src/achonet/claverhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Клавер клаб</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="arbuzhard">
+        <img class="product-image MA-image" src="src/achonet/arbuzhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Арбуз-клубника</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="aperolhard">
+        <img class="product-image MA-image" src="src/achonet/aperolhard.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Апероль шприц</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="morcnorm">
+        <img class="product-image MA-image" src="src/achonet/morcnorm.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Морс из ягод</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv achonet" data-id="vinogramnormik">
+        <img class="product-image MA-image" src="src/achonet/vinogradnorm.png" alt="">
+        <h2 class="block__title pre-title">АЧОНЕТ? <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Виноград-малина</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    <!-- XYLINET -->
+
+    <div class="filterDiv xylinet" data-id="xylinetananasovyinormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/ananasovyi_k.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Ананасовый <br> Камшот</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetapelsinoviynormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/apelsinovyi_d.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Апельсиновый <br> Дождь</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetenegrynormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/enegrgichnyi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Энергичный <br> Свинг</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetezhevikanormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/ezhevichnyi_bdsm.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Ежевичный <br> БДСМ</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    <div class="filterDiv xylinet" data-id="xylinetkaktusnormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/kaktusovyi_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Кактусовый <br> Канинг</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetkinkkivinormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/kink_kivi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Кинк <br> Киви</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="kislosladkiynormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/kislo-sladkiyi_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Кисло <br> Сладкий Фетчинг</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="klubnichniymnormik">
+        <img class="product-image MA-image" src="src/xylinet/hard/klubnichnyi_m.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Клубничный <br> Минет</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="raspberryfistingnormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/malinovii_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Малиновый <br> фистинг</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="mangofistingnormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/mangovyi_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Манговый <br> фроттаж</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="myatainormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/myatnaya_i.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Мятная <br> иррумация</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="perskikuninormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/persikovyi_kuni.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Персиковый <br> куни</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="tropicsquirtnormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/tropicheskiy_skvirt.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Тропический <br> сквирт</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="vinogradnormik">
+        <img class="product-image MA-image" src="src/xylinet/norm/vinogradnyi_o.png" alt="">
+        <h2 class="block__title pre-title">XYLINET</h2>
+        <h1 class="block__title item_title">Виноградный <br> оргазм</h1>
+        <h1 class="price">от 190Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    <!-- HARD -->
+
+    <div class="filterDiv xylinet" data-id="xylinetananasovyihard">
+        <img class="product-image MA-image" src="src/xylinet/hard/ananasovyi_k.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Ананасовый <br> Камшот</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetapelsinoviyhard">
+        <img class="product-image MA-image" src="src/xylinet/hard/apelsinovyi_d.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Апельсиновый <br> Дождь</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetenegryhard">
+        <img class="product-image MA-image" src="src/xylinet/hard/enegrgichnyi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Энергичный <br> Свинг</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetezhevikahard">
+        <img class="product-image MA-image" src="src/xylinet/hard/ezhevichnyi_bdsm.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Ежевичный <br> БДСМ</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    <div class="filterDiv xylinet" data-id="xylinetkaktushard">
+        <img class="product-image MA-image" src="src/xylinet/hard/kaktusovyi_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Кактусовый <br> Канинг</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="xylinetkinkkivihard">
+        <img class="product-image MA-image" src="src/xylinet/hard/kink_kivi.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Кинк <br> Киви</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="kislosladkiyhard">
+        <img class="product-image MA-image" src="src/xylinet/hard/kislo-sladkiyi_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Кисло <br> Сладкий Фетчинг</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="klubnichniymhard">
+        <img class="product-image MA-image" src="src/xylinet/hard/klubnichnyi_m.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Клубничный <br> Минет</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="raspberryfistinghard">
+        <img class="product-image MA-image" src="src/xylinet/hard/malinovii_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Малиновый <br> фистинг</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="mangofistinghard">
+        <img class="product-image MA-image" src="src/xylinet/hard/mangovyi_f.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Манговый <br> фроттаж</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="myataihard">
+        <img class="product-image MA-image" src="src/xylinet/hard/myatnaya_i.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Мятная <br> иррумация</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="perskikunihard">
+        <img class="product-image MA-image" src="src/xylinet/hard/persikovyi_kuni.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Персиковый <br> куни</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="tropicsquirthard">
+        <img class="product-image MA-image" src="src/xylinet/hard/tropicheskiy_skvirt.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Тропический <br> сквирт</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+    <div class="filterDiv xylinet" data-id="vinogradhard">
+        <img class="product-image MA-image" src="src/xylinet/hard/vinogradnyi_o.png" alt="">
+        <h2 class="block__title pre-title">XYLINET <span class="hard">HARD</span></h2>
+        <h1 class="block__title item_title">Виноградный <br> оргазм</h1>
+        <h1 class="price">от 205Р</h1>
+        <div class="btns">
+            <button class="btnn minus" data-id="xylinetcoldananac" data-action="minusBtn">-</button>
+            <p id="counter50" data-counter>0</p>
+            <button class="btnn plus" data-id="xylinetcoldananac" data-action="plusBtn">+</button>
+            </div>
+        <button class="btn" data-cart data-action="addToCart">Добавить в корзину</button>
+    </div>
+
+    </div>
+</div>
+
+<div class="contentt">
+    <div id="myModal4" class="modal">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>ЗАКАЗ</h3>
+          <span class="close">X<i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-4">
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <h5 class="card-title none">Ваш заказ</h4>
+                          <div data-cart-empty class="alert alert-secondary" role="alert">
+                          Корзина пуста
+                      </div>
+                      <div class="cart-wrapper">
+                         
+                      </div>
+                      <div class="cart-total none">
+                          <p data-cart-delivery>
+                              <span class="h5">Минимальная сумма заказа: </span>
+                              <span class="delivery-cost">50.000₽</span><br>
+                              <span class="small">Скидка на первый заказ 5%</span>
+                          </p>
+                          <!-- <p><span class="h5">Итого:</span>
+                              <span class="total-price">0</span>
+                              <span class="rouble">₽</span></p> -->
+                      </div>
+                  </div>
+                  <div id="order-form" class="card-body border-top none">
+                      <h5 class="card-title">Оформить заказ</h4>
+                      <form id="telegram">
+                          <div class="form-group">
+                              <input type="text" name="name" class="form-control" placeholder="Имя">
+                              <input type="phone" name="phone" class="form-control" placeholder="Номер телефона +7">
+                              <input type="text" name="telegram" class="form-control" placeholder="Ваш telegram через @">
+                          </div>
+                          <button id="submitButton" type="submit" class="submitbtn btn-primary" click="">Заказать</button>
+                      </form>
+                  </div>
+                  <script>
+                    // Получаем ссылку на форму
+                    const form = document.getElementById('myForm');
+                  
+                    // Добавляем обработчик события для каждого поля ввода
+                    const formInputs = form.querySelectorAll('input, textarea');
+                    formInputs.forEach((input) => {
+                      input.addEventListener('blur', () => {
+                        // Скрываем клавиатуру после потери фокуса (blur) с поля ввода
+                        document.activeElement.blur();
+                      });
+                    });
+                  </script>
+              </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+<script src="js/calcCartPrice.js"></script>
+<script src="js/toggleCart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/cart02.js"></script>
+</body>
+</html>
